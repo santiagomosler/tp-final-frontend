@@ -1,0 +1,33 @@
+.chat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.chat-card {
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 120px;
+  padding: 0.5rem;
+  text-align: center;
+  color: black;
+  background: white;
+  transition: background-color 0.2s ease;
+}
+
+.chat-card:hover {
+  background-color: #f0f0f0;
+}
+
+.chat-avatar {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.chat-name {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}

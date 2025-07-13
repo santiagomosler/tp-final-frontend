@@ -22,7 +22,7 @@ export const ChatProvider = ({ children }) => {
     },
     monica: {
       name: "Monica",
-      avatar: "/src/assets/monica.jpg",
+      avatar: "/src/assets/monica.jpeg",
       messages: [
         { from: "them", text: "¡Hice lasaña! ¿Querés venir?" },
       ],
