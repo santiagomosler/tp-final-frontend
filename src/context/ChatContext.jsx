@@ -9,22 +9,21 @@ export const ChatProvider = ({ children }) => {
       name: "Rachel",
       avatar: "/src/assets/rachel.jpg",
       messages: [
-        { from: "them", text: "¡Hola! ¿Cómo estás?" },
-        { from: "me", text: "Todo bien, ¿vos?" },
+        { from: "them", text: "What if I want to be a purse, you know, or a hat!" },
       ],
     },
     ross: {
       name: "Ross",
       avatar: "/src/assets/ross.jpg",
       messages: [
-        { from: "them", text: "¿Te conté lo de los dinosaurios?" },
+        { from: "them", text: "Did I tell you about the dinosaurs?" },
       ],
     },
     monica: {
       name: "Monica",
       avatar: "/src/assets/monica.jpeg",
       messages: [
-        { from: "them", text: "¡Hice lasaña! ¿Querés venir?" },
+        { from: "them", text: "Welcome to the real world. It sucks. You’re gonna love it." },
       ],
     },
     joey: {
@@ -38,7 +37,7 @@ export const ChatProvider = ({ children }) => {
       name: "Phoebe",
       avatar: "/src/assets/phoebe.jpg",
       messages: [
-        { from: "them", text: "Smelly cat, smelly cat..." },
+        { from: "them", text: "They don't know that we know they know we know!" },
       ],
     },
     chandler: {

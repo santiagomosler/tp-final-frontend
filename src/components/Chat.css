@@ -1,0 +1,106 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Contenedor principal del chat */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Cabecera del chat */
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Mensajes */
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Estilos de mensajes */
+.message {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.message.them {
+  background-color: #e8e8e8;
+  align-self: flex-start;
+}
+
+.message.me {
+  background-color: #cce5ff;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Formulario */
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.chat-form button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background-color: #1259a3;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .chat-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .chat-form input {
+    font-size: 0.9rem;
+  }
+
+  .chat-form button {
+    font-size: 0.9rem;
+  }
+
+  .chat-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
