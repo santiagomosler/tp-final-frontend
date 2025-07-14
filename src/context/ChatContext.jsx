@@ -9,62 +9,103 @@ export const ChatProvider = ({ children }) => {
       name: "Rachel",
       avatar: "/src/assets/rachel.jpg",
       messages: [
-        { from: "them", text: "What if I want to be a purse, you know, or a hat!" },
+        {
+          from: "them",
+          text: "What if I want to be a purse, you know, or a hat!",
+          time: "11:30 AM",
+          timestamp: new Date("2023-12-01T11:30:00").getTime(),
+        },
       ],
     },
     ross: {
       name: "Ross",
       avatar: "/src/assets/ross.jpg",
       messages: [
-        { from: "them", text: "Did I tell you about the dinosaurs?" },
+        {
+          from: "them",
+          text: "Did I tell you about the dinosaurs?",
+          time: "12:54 PM",
+          timestamp: new Date("2023-12-01T12:54:00").getTime(),
+        },
       ],
     },
     monica: {
       name: "Monica",
       avatar: "/src/assets/monica.jpeg",
       messages: [
-        { from: "them", text: "Welcome to the real world. It sucks. You’re gonna love it." },
+        {
+          from: "them",
+          text: "Welcome to the real world. It sucks. You’re gonna love it.",
+          time: "01:50 PM",
+          timestamp: new Date("2023-12-01T13:50:00").getTime(),
+        },
       ],
     },
     joey: {
       name: "Joey",
       avatar: "/src/assets/joey.jpg",
       messages: [
-        { from: "them", text: "How you doin'?" },
+        {
+          from: "them",
+          text: "How you doin'?",
+          time: "03:15 PM",
+          timestamp: new Date("2023-12-01T15:15:00").getTime(),
+        },
       ],
     },
     phoebe: {
       name: "Phoebe",
       avatar: "/src/assets/phoebe.jpg",
       messages: [
-        { from: "them", text: "They don't know that we know they know we know!" },
+        {
+          from: "them",
+          text: "They don't know that we know they know we know!",
+          time: "04:25 PM",
+          timestamp: new Date("2023-12-01T16:25:00").getTime(),
+        },
       ],
     },
     chandler: {
       name: "Chandler",
       avatar: "/src/assets/chandler.jpg",
       messages: [
-        { from: "them", text: "Could I BE wearing any more clothes?" },
+        {
+          from: "them",
+          text: "Could I BE wearing any more clothes?",
+          time: "07:30 PM",
+          timestamp: new Date("2023-12-01T19:30:00").getTime(),
+        },
       ],
     },
   });
 
+
   const sendMessage = (characterId, messageText) => {
+    const now = new Date();
+    const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    const timestamp = now.getTime();
+
     setChats((prevChats) => {
       const updatedMessages = [
         ...prevChats[characterId].messages,
-        { from: "me", text: messageText },
-      ];
+        {
+        from: "me",
+        text: messageText,
+        time: time,
+        timestamp: timestamp,
+        delivered: true, // esto lo podrías usar para estados futuros
+      },
+    ];
 
       return {
-        ...prevChats,
-        [characterId]: {
-          ...prevChats[characterId],
-          messages: updatedMessages,
-        },
-      };
-    });
-  };
+      ...prevChats,
+      [characterId]: {
+        ...prevChats[characterId],
+        messages: updatedMessages,
+      },
+    };
+  });
+}
 
   return (
     <ChatContext.Provider value={{ chats, sendMessage }}>

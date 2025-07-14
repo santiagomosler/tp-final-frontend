@@ -1,106 +1,82 @@
-/* General */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fafafa;
-  color: #333;
-}
-
-/* Contenedor principal del chat */
 .chat-container {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
-/* Cabecera del chat */
 .chat-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f5f5;
 }
 
 .chat-avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  margin-right: 1rem;
 }
 
-/* Mensajes */
 .chat-messages {
-  flex-grow: 1;
+  flex: 1;
+  padding: 1rem;
   overflow-y: auto;
-  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-/* Estilos de mensajes */
 .message {
-  padding: 0.6rem 1rem;
-  border-radius: 12px;
-  max-width: 80%;
-  word-break: break-word;
+  max-width: 70%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  word-wrap: break-word;
 }
 
 .message.them {
-  background-color: #e8e8e8;
+  background-color: #e6e6e6;
   align-self: flex-start;
 }
 
 .message.me {
-  background-color: #cce5ff;
+  background-color: #d2f8d2;
   align-self: flex-end;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-text {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #555;
   text-align: right;
 }
 
-/* Formulario */
 .chat-form {
   display: flex;
-  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
 }
 
 .chat-form input {
   flex: 1;
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .chat-form button {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  background-color: #1976d2;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.chat-form button:hover {
-  background-color: #1259a3;
-}
-
-/* Responsividad */
-@media (max-width: 600px) {
-  .chat-header h2 {
-    font-size: 1.1rem;
-  }
-
-  .chat-form input {
-    font-size: 0.9rem;
-  }
-
-  .chat-form button {
-    font-size: 0.9rem;
-  }
-
-  .chat-avatar {
-    width: 40px;
-    height: 40px;
-  }
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
 }

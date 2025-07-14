@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useChat } from "../context/ChatContext.jsx";
-import "../components/Chat.css"; // Importa los estilos del chat
+import "../components/Chat.css";
 
 const Chat = () => {
-  const { id } = useParams(); // `id` será "rachel", "ross", etc.
-  const { chats, sendMessage } = useChat(); // Contexto global
+  const { id } = useParams();
+  const { chats, sendMessage } = useChat();
+  const chat = chats[id];
+  const [newMessage, setNewMessage] = useState("");
 
-  const chat = chats[id]; // Obtenemos el chat correspondiente
-  const [newMessage, setNewMessage] = useState(""); // Estado del input
-
-  // Si el chat no existe, mostramos mensaje de error
   if (!chat) return <p>Chat no encontrado.</p>;
 
-  // Enviar el mensaje cuando se envía el formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newMessage.trim()) {
-      sendMessage(id, newMessage); // Se actualiza el contexto
-      setNewMessage(""); // Se limpia el input
+      sendMessage(id, newMessage);
+      setNewMessage("");
     }
   };
 
@@ -31,9 +28,15 @@ const Chat = () => {
 
       <div className="chat-messages">
         {chat.messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.from}`}>
-            <span>{msg.text}</span>
-          </div>
+        <div key={index} className={`message ${msg.from}`}>
+          <span>
+            {msg.text}
+            {msg.from === "me" && (
+            <span className="tick"> ✅✅ </span>
+            )}
+          </span>
+          <div className="time-stamp">{msg.time}</div>
+        </div>
         ))}
       </div>
 
@@ -51,4 +54,3 @@ const Chat = () => {
 };
 
 export default Chat;
-
