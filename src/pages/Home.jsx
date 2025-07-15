@@ -8,7 +8,6 @@ const Home = () => {
 
   return (
     <div>
-      <h2>Elegí un personaje para chatear</h2>
       <ChatList chats={chats} />
     </div>
   );

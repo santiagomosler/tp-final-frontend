@@ -1,0 +1,139 @@
+/* Contenedor general del componente de chat (pantalla completa) */
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-color: #1f2020;
+}
+
+/* Encabezado superior del chat: avatar + nombre del personaje */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 16px;
+  height: 44px;
+  background-color: #242525;
+}
+
+/* Imagen del avatar del personaje en el encabezado */
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0;
+}
+
+/* Nombre del personaje en el encabezado */
+.chat-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fafafa;
+  font-size: 16px;
+  margin: 0;
+  padding-left: 15px;
+}
+
+/* Contenedor de todos los mensajes del chat, con scroll vertical */
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: transparent;
+}
+
+/* Estilo base para cada mensaje */
+.message {
+  color: #fafafa;
+  font-size: 14.2px;
+  font-weight: 400;
+  padding: 0px 7px 0px 9px;
+  border-radius: 8px;
+}
+
+/* Estilo específico para mensajes recibidos (alineado a la izquierda) */
+.message.them {
+  background-color: #242626;
+  display: flex;
+  align-self: flex-start;
+  padding-bottom: 5px;
+  padding-top: 3px;
+}
+
+/* Estilo específico para mensajes enviados (alineado a la derecha) */
+.message.me {
+  background-color: #144d37;
+  display: flex;
+  align-self: flex-end;
+}
+
+/* Contenedor horizontal del contenido del mensaje: texto, hora, ticks */
+.message-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Texto del mensaje */
+.message-text {
+  display: flex;
+  flex-direction: row;
+  font-size: 14.2px;
+}
+
+/* Contenedor que agrupa la hora y los ticks */
+.message-meta {
+  display: flex;
+  
+  gap: 0.25rem;
+  white-space: nowrap;
+  padding: 15px 0px 0px 20px;
+}
+
+/* Hora del mensaje */
+.message-time {
+  font-size: 11px;
+  color: #ffffff99;
+  text-align: right;
+}
+
+/* Ícono de doble tick */
+.message-tick {
+  color: #ffffff99
+}
+
+/* Contenedor del formulario de entrada (input + botón) */
+.chat-form {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px 10px 5px;
+  background-color: transparent;
+}
+
+/* Campo de texto para escribir el mensaje */
+.chat-form input {
+  flex: 1;
+  border: none;
+  padding: 15px 10px 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: #242525;
+}
+
+/* Botón para enviar el mensaje */
+.chat-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  font-size: 1.4rem;
+  color: #fafaf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

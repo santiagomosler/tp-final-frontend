@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./ChatList.css";
+import "../styles/Chatlist.css";
 
 const ChatList = ({ chats }) => {
   // Convertimos a array y ordenamos por último timestamp (descendente)
@@ -37,6 +37,3 @@ const ChatList = ({ chats }) => {
 };
 
 export default ChatList;
-
-
-
