@@ -16,17 +16,25 @@ const ChatList = ({ chats }) => {
         const lastMessage = chat.messages[chat.messages.length - 1];
 
         return (
-          <Link to={`/chat/${id}`} key={id} className="chat-item">
-            <img src={chat.avatar} alt={chat.name} className="chat-avatar" />
-
-            <div className="chat-content">
-              <div className="chat-header">
-                <span className="chat-name">{chat.name}</span>
-                <span className="chat-time">{lastMessage?.time || ""}</span>
+          <Link to={`/chat/${id}`} key={id} className="chat-link">
+            <div className="chat-card">
+              <div className="chat-avatar-home-wrapper">
+                <img
+                  src={chat.avatar}
+                  alt={chat.name}
+                  className="chat-avatar-home"
+                />
               </div>
 
-              <div className="chat-preview">
-                {lastMessage?.text?.slice(0, 30)}
+              <div className="chat-text">
+                <div className="chat-header-home">
+                  <span className="chat-name-home">{chat.name}</span>
+                  <span className="chat-time-home">{lastMessage?.time || ""}</span>
+                </div>
+
+                <div className="chat-preview">
+                  {lastMessage?.text?.slice(0, 30)}
+                </div>
               </div>
             </div>
           </Link>

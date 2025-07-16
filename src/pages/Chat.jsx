@@ -24,8 +24,8 @@ const Chat = () => {
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <img src={chat.avatar} alt={chat.name} className="chat-avatar" />
-        <h2 className="chat-name">{chat.name}</h2>
+        <img src={chat.avatar} alt={chat.name} className="chat-avatar-chat" />
+        <h2 className="chat-name-chat">{chat.name}</h2>
 
         <div className="chat-icons">
           <div className="video-dropdown-group">
@@ -69,7 +69,7 @@ const Chat = () => {
                 <span className="message-time">{msg.time}</span>
                 {msg.from === "me" && (
                   <span className="message-tick">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 10">
                       <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z" />
                     </svg>
                   </span>

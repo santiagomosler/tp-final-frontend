@@ -18,7 +18,7 @@
 }
 
 /* Imagen del avatar del personaje en el encabezado */
-.chat-avatar {
+.chat-avatar-chat {
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -26,7 +26,7 @@
 }
 
 /* Nombre del personaje en el encabezado */
-.chat-name {
+.chat-name-chat {
   font-size: 1.2rem;
   font-weight: bold;
   color: #fafafa;
@@ -112,20 +112,25 @@
 /* Contenedor de todos los mensajes del chat, con scroll vertical */
 .chat-messages {
   flex: 1;
-  padding: 1rem;
+  padding: 30px 60px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 10px;
   background-color: transparent;
 }
 
 /* Estilo base para cada mensaje */
 .message {
-  color: #fafafa;
   font-size: 14.2px;
   font-weight: 400;
-  padding: 0px 7px 0px 9px;
+  color: #fafafa;
   border-radius: 8px;
+  max-width: 65%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  padding: 8px 12px;
+  box-sizing: border-box;
 }
 
 /* Estilo específico para mensajes recibidos (alineado a la izquierda) */
@@ -133,8 +138,9 @@
   background-color: #242626;
   display: flex;
   align-self: flex-start;
-  padding-bottom: 5px;
-  padding-top: 3px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 /* Estilo específico para mensajes enviados (alineado a la derecha) */
@@ -142,6 +148,8 @@
   background-color: #144d37;
   display: flex;
   align-self: flex-end;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Contenedor horizontal del contenido del mensaje: texto, hora, ticks */
@@ -156,6 +164,8 @@
   display: flex;
   flex-direction: row;
   font-size: 14.2px;
+  white-space: normal;
+  word-break: break-word;
 }
 
 /* Contenedor que agrupa la hora y los ticks */
@@ -163,7 +173,7 @@
   display: flex;
   gap: 0.25rem;
   white-space: nowrap;
-  padding: 15px 0px 0px 20px;
+  padding: 10px 0px 0px 20px;
 }
 
 /* Hora del mensaje */
@@ -177,6 +187,7 @@
 /* Ícono de doble tick */
 .message-tick {
   color: #ffffff99;
+  height: 100%;
 }
 
 /* Contenedor del formulario de entrada (input + botones) */
@@ -185,7 +196,7 @@
   align-items: center;
   padding: 5px;
   background-color: #242626;
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
   border-radius: 30px;
   
 }
@@ -241,5 +252,6 @@
   cursor: pointer;
   background-color: #25d366;
   border-radius: 20px;
+  color: #1f2020;
   transition: background-color 0.20s ease-in-out;
 }
