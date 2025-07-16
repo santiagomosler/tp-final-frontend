@@ -33,7 +33,7 @@ const ChatList = ({ chats }) => {
                 </div>
 
                 <div className="chat-preview">
-                  {lastMessage?.text?.slice(0, 30)}
+                  {lastMessage?.text}
                 </div>
               </div>
             </div>
