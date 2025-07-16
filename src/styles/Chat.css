@@ -1,6 +1,4 @@
 /* Contenedor general del componente de chat (pantalla completa) */
-
-
 .chat-container {
   display: flex;
   flex-direction: column;
@@ -13,7 +11,7 @@
 .chat-header {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   padding: 10px 16px;
   height: 44px;
   background-color: #242525;
@@ -35,6 +33,80 @@
   font-size: 16px;
   margin: 0;
   padding-left: 15px;
+}
+
+/* Contenedor de los íconos en el encabezado (videollamada, búsqueda, menú) */
+.chat-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  align-items: center;
+}
+
+/* Botón base para cada ícono del encabezado */
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-dropdown-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 40px;
+  width: 70px;
+}
+
+.video-dropdown-group:hover {
+  cursor: pointer;
+  background-color: #2f3030;
+  border-radius: 20px;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.chevron-icon,
+.video-call-icon {
+  color: #fafafa;
+  outline: none;
+}
+
+
+/* Lupa */
+.search-icon {
+  color: #fafafa;
+  width: 40px;
+  height: 40px;
+}
+
+.search-icon:hover {
+  cursor: pointer;
+  background-color: #2f3030;
+  border-radius: 20px;
+  transition: background-color 0.25s ease-in-out;
+}
+
+/* Menú (tres puntos) */
+.menu-icon {
+  color: #fafafa;
+  width: 40px;
+  height: 40px;
+}
+
+.video-dropdown-group:hover,
+.search-icon:hover,
+.menu-icon:hover {
+  cursor: pointer;
+  background-color: #333535;
+  border-radius: 20px;
+  transition: background-color 0.20s ease-in-out;
 }
 
 /* Contenedor de todos los mensajes del chat, con scroll vertical */
@@ -89,7 +161,6 @@
 /* Contenedor que agrupa la hora y los ticks */
 .message-meta {
   display: flex;
-  
   gap: 0.25rem;
   white-space: nowrap;
   padding: 15px 0px 0px 20px;
@@ -100,40 +171,75 @@
   font-size: 11px;
   color: #ffffff99;
   text-align: right;
+  align-self: center;
 }
 
 /* Ícono de doble tick */
 .message-tick {
-  color: #ffffff99
+  color: #ffffff99;
 }
 
-/* Contenedor del formulario de entrada (input + botón) */
+/* Contenedor del formulario de entrada (input + botones) */
 .chat-form {
   display: flex;
   align-items: center;
-  padding: 10px 5px 10px 5px;
-  background-color: transparent;
+  padding: 5px;
+  background-color: #242626;
+  margin: 10px 10px 10px 10px;
+  border-radius: 30px;
+  
+}
+
+/* === Contenedor del input con barra indicadora de escritura === */
+.input-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  outline: none;
 }
 
 /* Campo de texto para escribir el mensaje */
-.chat-form input {
+.input-wrapper input {
   flex: 1;
   border: none;
-  padding: 15px 10px 10px 20px;
-  border-radius: 20px;
-  font-size: 1rem;
-  background-color: #242525;
+  padding: 10px 10px 5px 20px;
+  font-size: 16px;
+  color: #fafafa;
+  background-color: transparent;
+  outline: none;
 }
 
-/* Botón para enviar el mensaje */
+/* Botón general dentro del formulario (enviar, mic, emoji, etc.) */
 .chat-form button {
   background: none;
   border: none;
-  cursor: pointer;
-  padding: 0.3rem;
-  font-size: 1.4rem;
-  color: #fafaf0;
+  color: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* === Íconos dentro del formulario (footer) === */
+.form-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.plus-icon:hover,
+.emoji-icon:hover {
+  cursor: pointer;
+  background-color: #2f3030;
+  border-radius: 20px;
+  transition: background-color 0.20s ease-in-out;
+}
+
+.send-button:hover {
+  cursor: pointer;
+  background-color: #25d366;
+  border-radius: 20px;
+  transition: background-color 0.20s ease-in-out;
 }
