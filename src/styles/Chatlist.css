@@ -73,6 +73,20 @@
 
 /* === Vista previa del último mensaje === */
 .chat-preview {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   color: #ffffff99;
+}
+
+.chat-check-icon svg{
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+}
+
+.chat-check-icon {
+  display:flex;
+  flex-direction: column;
+  margin: 0;
 }
