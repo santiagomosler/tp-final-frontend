@@ -25,6 +25,8 @@ Estrctura del proyecto
 
 src/
 │
+├── assets/                  # Avatares de los personajes
+│
 ├── components/
 │   └── ChatList.jsx         # Muestra lista de chats ordenados
 │
@@ -36,11 +38,11 @@ src/
 │   └── Chat.jsx             # Vista individual del chat seleccionado
 │
 ├── styles/
-│   ├── Home.css
+│   ├── App.css
 │   ├── Chat.css
-│   └── Chatlist.css
+│   ├── Chatlist.css
+│   └── Home.css
 │
-├── assets/                  # Avatares de los personajes
 └── App.jsx, main.jsx        # Entradas principales de la app
 
 ¿Cómo se simulan los mensajes?
