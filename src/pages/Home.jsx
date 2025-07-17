@@ -7,7 +7,6 @@ const Home = () => {
   const { chats } = useChat();
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Filtrar los chats según el nombre
   const filteredChats = Object.fromEntries(
     Object.entries(chats).filter(([_, chat]) =>
       chat.name.toLowerCase().includes(searchTerm.toLowerCase())

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Chat from "./pages/Chat.jsx";
-import './styles/App.css'; // correcto
+import './styles/App.css';
 
 
 const App = () => {

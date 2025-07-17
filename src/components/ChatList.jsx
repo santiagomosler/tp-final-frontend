@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles/Chatlist.css";
 
 const ChatList = ({ chats }) => {
-  // Convertimos a array y ordenamos por último timestamp (descendente)
   const sortedChats = Object.entries(chats).sort(([, a], [, b]) => {
     const timeA = a.messages[a.messages.length - 1]?.timestamp || 0;
     const timeB = b.messages[b.messages.length - 1]?.timestamp || 0;

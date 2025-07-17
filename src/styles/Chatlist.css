@@ -1,18 +1,14 @@
-
-/* === Contenedor general de la lista de chats === */
 .chat-list {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-/* === Enlace que envuelve cada chat === */
 .chat-link {
   width: 100%;
   text-decoration: none;
 }
 
-/* === Contenedor visual de cada chat (tarjeta) === */
 .chat-card {
   display: flex;
   flex-direction: row;
@@ -22,18 +18,15 @@
   border-radius: 10px;
 }
 
-/* === Efecto hover sobre cada chat === */
 .chat-card:hover {
   background-color: #353636;
 }
 
-/* === Contenedor del avatar === */
 .chat-avatar-home-wrapper {
   width: 50px;
   height: 50px;
 }
 
-/* === Imagen del avatar del personaje === */
 .chat-avatar-home {
   width: 100%;
   height: 100%;
@@ -41,7 +34,6 @@
   object-fit: cover;
 }
 
-/* === Contenedor de todo el texto (nombre, hora, preview) === */
 .chat-text {
   display: flex;
   flex-direction: column;
@@ -50,14 +42,12 @@
   gap: 5px;
 }
 
-/* === Encabezado del chat (nombre + hora) === */
 .chat-header-home {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* === Nombre del personaje === */
 .chat-name-home {
   font-size: 17px;
   font-weight: 500;
@@ -65,13 +55,11 @@
   color: #fafafa;
 }
 
-/* === Hora del último mensaje === */
 .chat-time-home {
   font-size: 12px;
   color: #ffffff99;
 }
 
-/* === Vista previa del último mensaje === */
 .chat-preview {
   display: flex;
   align-items: center;
@@ -82,7 +70,6 @@
 .chat-check-icon svg{
   width: 20px;
   height: 20px;
-  margin-right: 0px;
 }
 
 .chat-check-icon {

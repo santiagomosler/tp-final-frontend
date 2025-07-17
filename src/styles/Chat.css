@@ -1,4 +1,3 @@
-/* Contenedor general del componente de chat (pantalla completa) */
 .chat-container {
   display: flex;
   flex-direction: column;
@@ -7,7 +6,6 @@
   background-color: #1f2020;
 }
 
-/* Encabezado superior del chat: avatar + nombre del personaje */
 .chat-header {
   display: flex;
   align-items: center;
@@ -17,7 +15,6 @@
   background-color: #242525;
 }
 
-/* Imagen del avatar del personaje en el encabezado */
 .chat-avatar-chat {
   width: 40px;
   height: 40px;
@@ -25,7 +22,6 @@
   margin: 0;
 }
 
-/* Nombre del personaje en el encabezado */
 .chat-name-chat {
   font-size: 1.2rem;
   font-weight: bold;
@@ -35,7 +31,6 @@
   padding-left: 15px;
 }
 
-/* Contenedor de los íconos en el encabezado (videollamada, búsqueda, menú) */
 .chat-icons {
   display: flex;
   gap: 10px;
@@ -43,7 +38,6 @@
   align-items: center;
 }
 
-/* Botón base para cada ícono del encabezado */
 .icon-btn {
   background: none;
   border: none;
@@ -78,8 +72,6 @@
   outline: none;
 }
 
-
-/* Lupa */
 .search-icon {
   color: #fafafa;
   width: 40px;
@@ -93,7 +85,6 @@
   transition: background-color 0.25s ease-in-out;
 }
 
-/* Menú (tres puntos) */
 .menu-icon {
   color: #fafafa;
   width: 40px;
@@ -109,7 +100,6 @@
   transition: background-color 0.20s ease-in-out;
 }
 
-/* Contenedor de todos los mensajes del chat, con scroll vertical */
 .chat-messages {
   flex: 1;
   padding: 30px 60px;
@@ -119,7 +109,6 @@
   background-color: transparent;
 }
 
-/* Estilo base para cada mensaje */
 .message {
   font-size: 14.2px;
   font-weight: 400;
@@ -133,7 +122,6 @@
   box-sizing: border-box;
 }
 
-/* Estilo específico para mensajes recibidos (alineado a la izquierda) */
 .message.them {
   background-color: #242626;
   display: flex;
@@ -143,7 +131,6 @@
   white-space: normal;
 }
 
-/* Estilo específico para mensajes enviados (alineado a la derecha) */
 .message.me {
   background-color: #144d37;
   display: flex;
@@ -152,14 +139,12 @@
   overflow-wrap: break-word;
 }
 
-/* Contenedor horizontal del contenido del mensaje: texto, hora, ticks */
 .message-content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-/* Texto del mensaje */
 .message-text {
   display: flex;
   flex-direction: row;
@@ -168,7 +153,6 @@
   word-break: break-word;
 }
 
-/* Contenedor que agrupa la hora y los ticks */
 .message-meta {
   display: flex;
   gap: 0.25rem;
@@ -176,7 +160,6 @@
   padding: 10px 0px 0px 20px;
 }
 
-/* Hora del mensaje */
 .message-time {
   font-size: 11px;
   color: #ffffff99;
@@ -184,23 +167,19 @@
   align-self: center;
 }
 
-/* Ícono de doble tick */
 .message-tick {
   color: #ffffff99;
 }
 
-/* Contenedor del formulario de entrada (input + botones) */
 .chat-form {
   display: flex;
   align-items: center;
   padding: 5px;
   background-color: #242626;
   margin: 10px;
-  border-radius: 30px;
-  
+  border-radius: 30px;  
 }
 
-/* === Contenedor del input con barra indicadora de escritura === */
 .input-wrapper {
   display: flex;
   flex: 1;
@@ -208,7 +187,6 @@
   outline: none;
 }
 
-/* Campo de texto para escribir el mensaje */
 .input-wrapper input {
   flex: 1;
   border: none;
@@ -219,7 +197,6 @@
   outline: none;
 }
 
-/* Botón general dentro del formulario (enviar, mic, emoji, etc.) */
 .chat-form button {
   background: none;
   border: none;
@@ -231,7 +208,6 @@
   height: 40px;
 }
 
-/* === Íconos dentro del formulario (footer) === */
 .form-icon {
   display: flex;
   align-items: center;
