@@ -64,3 +64,11 @@ Iniciación del proyecto (comandos en consola):
 
     npm install
     npm run dev
+
+Repositorio en Github:
+
+    https://github.com/santiagomosler/tp-final-frontend
+
+Link de despliegue en Vercel:
+
+    https://tp-final-frontend-qgdvi3tfv-santiago-moslers-projects.vercel.app/
