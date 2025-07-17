@@ -6,7 +6,7 @@ export const ChatProvider = ({ children }) => {
   const [chats, setChats] = useState({
     rachel: {
       name: "Rachel",
-      avatar: "/src/assets/rachel.jpg",
+      avatar: "/images/rachel.jpg",
       messages: [
         {
           from: "them",
@@ -18,7 +18,7 @@ export const ChatProvider = ({ children }) => {
     },
     ross: {
       name: "Ross",
-      avatar: "/src/assets/ross.jpg",
+      avatar: "/images/ross.jpg",
       messages: [
         {
           from: "them",
@@ -30,7 +30,7 @@ export const ChatProvider = ({ children }) => {
     },
     monica: {
       name: "Monica",
-      avatar: "/src/assets/monica.jpeg",
+      avatar: "/images/monica.jpeg",
       messages: [
         {
           from: "them",
@@ -42,7 +42,7 @@ export const ChatProvider = ({ children }) => {
     },
     joey: {
       name: "Joey",
-      avatar: "/src/assets/joey.jpg",
+      avatar: "/images/joey.jpg",
       messages: [
         {
           from: "them",
@@ -54,7 +54,7 @@ export const ChatProvider = ({ children }) => {
     },
     phoebe: {
       name: "Phoebe",
-      avatar: "/src/assets/phoebe.jpg",
+      avatar: "/images/phoebe.jpg",
       messages: [
         {
           from: "them",
@@ -66,7 +66,7 @@ export const ChatProvider = ({ children }) => {
     },
     chandler: {
       name: "Chandler",
-      avatar: "/src/assets/chandler.jpg",
+      avatar: "/images/chandler.jpg",
       messages: [
         {
           from: "them",
