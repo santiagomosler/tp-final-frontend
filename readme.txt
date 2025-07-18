@@ -71,4 +71,4 @@ Repositorio en Github:
 
 Link de despliegue en Vercel:
 
-    https://tp-final-frontend-qgdvi3tfv-santiago-moslers-projects.vercel.app/
+    https://tp-final-frontend-phi.vercel.app/
