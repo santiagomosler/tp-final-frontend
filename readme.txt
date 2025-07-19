@@ -1,9 +1,12 @@
-WhatsApp Clone - Desafío Frontend
+# WhatsApp Clone - Desafío Frontend
 
-Este proyecto es una simulación de una app de mensajería estilo WhatsApp, desarrollada en React.
-Permite al usuario navegar entre distintos chats de personajes de la serie Friends, leer sus mensajes y enviar nuevos mensajes que se almacenan en memoria mediante el estado global del contexto.
+Este proyecto es una simulación de una app de mensajería estilo WhatsApp, desarrollada en **React**.
 
-Características
+Permite al usuario navegar entre distintos chats de personajes de la serie *Friends*, leer sus mensajes y enviar nuevos mensajes que se almacenan en memoria mediante el estado global del contexto.
+
+---
+
+## Características
 
 1. Vista principal con lista de chats activos ordenados por hora del último mensaje.
 2. Sistema de búsqueda para filtrar contactos.
@@ -13,62 +16,67 @@ Características
 6. Diseño responsivo basado en la experiencia WhatsApp Web.
 7. Simulación de funciones en desarrollo como videollamadas y envío de archivos.
 
-Tecnologías y Librerías
+---
 
-1. React — Librería principal para construir la interfaz de usuario.
-2. React Context API — Para el manejo del estado global de los chats.
-3. useState, useParams, useContext — Hooks de React para manejo de datos y navegación.
-4. React Router DOM — Para navegación entre vistas (Home y Chat).
-5. CSS personalizado — Estilos creados a medida en distintos archivos .css.
+## Tecnologías y Librerías
 
-Estrctura del proyecto
+- **React** — Librería principal para construir la interfaz de usuario.
+- **React Context API** — Para el manejo del estado global de los chats.
+- **Hooks** — `useState`, `useParams`, `useContext`.
+- **React Router DOM** — Navegación entre vistas (Home y Chat).
+- **CSS personalizado** — Estilos creados a medida en distintos archivos `.css`.
+
+---
+
+## Estructura del proyecto
 
 src/
 │
-├── assets/                  # Avatares de los personajes
-│
+├── assets/ # Avatares de los personajes
 ├── components/
-│   └── ChatList.jsx         # Muestra lista de chats ordenados
-│
+│ └── ChatList.jsx # Muestra lista de chats ordenados
 ├── context/
-│   └── ChatContext.jsx      # Estado global para todos los chats
-│
+│ └── ChatContext.jsx # Estado global para todos los chats
 ├── pages/
-│   ├── Home.jsx             # Página principal con barra de búsqueda
-│   └── Chat.jsx             # Vista individual del chat seleccionado
-│
+│ ├── Home.jsx # Página principal con barra de búsqueda
+│ └── Chat.jsx # Vista individual del chat seleccionado
 ├── styles/
-│   ├── App.css
-│   ├── Chat.css
-│   ├── Chatlist.css
-│   └── Home.css
-│
-└── App.jsx, main.jsx        # Entradas principales de la app
+│ ├── App.css
+│ ├── Chat.css
+│ ├── Chatlist.css
+│ └── Home.css
+└── App.jsx, main.jsx # Entradas principales de la app
 
-¿Cómo se simulan los mensajes?
 
-Los mensajes iniciales están precargados en ChatContext.jsx para cada personaje. Al escribir un nuevo mensaje en un chat:
-    Se guarda en el estado global del contexto.
-    Se marca automáticamente como enviado por el usuario (from: "me").
-    Se renderiza con el ícono de doble check.
+---
 
-Dificultades presentadas
+## ¿Cómo se simulan los mensajes?
 
-1. Manejo del estado global para múltiples chats de forma eficiente.
-2. Mostrar correctamente los mensajes ordenados cronológicamente.
-3. Implementar íconos condicionales según el origen del mensaje (from: "me").
-4. Evitar conflictos al renderizar múltiples íconos o llamadas a funciones aún no implementadas (como llamada por video o emojis).
-5. Crear una UI coherente y fiel a WhatsApp Web con CSS puro.
+Los mensajes iniciales están precargados en `ChatContext.jsx` para cada personaje. Al escribir un nuevo mensaje en un chat:
 
-Iniciación del proyecto (comandos en consola):
+- Se guarda en el estado global del contexto.
+- Se marca automáticamente como enviado por el usuario (`from: "me"`).
+- Se renderiza con el ícono de doble check.
 
-    npm install
-    npm run dev
+---
 
-Repositorio en Github:
+## Dificultades presentadas
 
-    https://github.com/santiagomosler/tp-final-frontend
+- Manejo del estado global para múltiples chats de forma eficiente.
+- Mostrar correctamente los mensajes ordenados cronológicamente.
+- Implementar íconos condicionales según el origen del mensaje (`from: "me"`).
+- Evitar conflictos al renderizar múltiples íconos o llamadas a funciones aún no implementadas (como llamada por video o emojis).
+- Crear una UI coherente y fiel a WhatsApp Web con CSS puro.
 
-Link de despliegue en Vercel:
+---
 
-    https://tp-final-frontend-phi.vercel.app/
+## Iniciación del proyecto (modo desarrollo)
+
+```bash
+npm install
+npm run dev
+
+## Links al proyecto
+
+- Repositorio en GitHub: https://github.com/santiagomosler/tp-final-frontend
+- Despliegue en Vercel: https://tp-final-frontend-phi.vercel.app/
