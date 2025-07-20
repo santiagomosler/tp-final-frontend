@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-title-container">
-        <a href="/" className="home-title">WhatsApp</a>
+        <a href="/" className="home-title">FriendsApp</a>
       </div>
       <div className="search-bar-wrapper">
         <input
