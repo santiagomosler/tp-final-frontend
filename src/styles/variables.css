@@ -26,8 +26,8 @@
   --font-size-time-home: 12px;
 
   /* Otros */
-  --border-radius-form: 30px;
-  --border-radius-icon-hover: 20px;
+  --border-radius-form: 0px;
+  --border-radius-icon-hover: 25px;
   --border-radius-message: 8px;
   --border-radius-chat-card: 10px;
   
